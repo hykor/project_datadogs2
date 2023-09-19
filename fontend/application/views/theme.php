@@ -1,0 +1,182 @@
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- Tell the browser to be responsive to screen width -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!-- Favicon icon -->
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url() ?>assets/images/datadogs/logo.png">
+	<title>Datadogs API</title>
+	<!-- Bootstrap Core CSS -->
+	<link href="<?php echo base_url() ?>assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="<?php echo base_url() ?>assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
+	<!-- This page CSS -->
+	<!-- chartist CSS -->
+	<link href="<?php echo base_url() ?>assets/plugins/chartist-js/dist/chartist.min.css" rel="stylesheet">
+	<link href="<?php echo base_url() ?>assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+	<!--c3 CSS -->
+	<link href="<?php echo base_url() ?>assets/plugins/c3-master/c3.min.css" rel="stylesheet">
+	<!--Toaster Popup message CSS -->
+	<link href="<?php echo base_url() ?>assets/plugins/toast-master/css/jquery.toast.css" rel="stylesheet">
+	<!-- Custom CSS -->
+	<link href="<?php echo base_url() ?>dist/css/style.css" rel="stylesheet">
+	<!-- Dashboard 1 Page CSS -->
+	<link href="<?php echo base_url() ?>dist/css/pages/dashboard1.css" rel="stylesheet">
+	<!-- You can change the theme colors from here -->
+	<link href="<?php echo base_url() ?>dist/css/colors/default-dark.css" id="theme" rel="stylesheet">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="fix-header fix-sidebar card-no-border">
+	
+	<!-- Preloader - style you can find in spinners.css -->
+	
+	<div class="preloader">
+		<div class="loader">
+			<div class="loader__figure"></div>
+			<p class="loader__label">Datadogs</p>
+		</div>
+	</div>
+	
+	<!-- Main wrapper - style you can find in pages.scss -->
+	<div id="main-wrapper">
+		
+		<!-- Topbar header - style you can find in pages.scss -->
+		<header class="topbar">
+			<nav class="navbar top-navbar navbar-expand-md navbar-light">
+				
+				<!-- Logo -->
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">
+						<!-- Logo icon --><b>
+							<!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+							<!-- Dark Logo icon -->
+							<img src="<?php echo base_url() ?>assets/images/datadogs/logo.png" alt="homepage" class="dark-logo" style="width: 50px;" />
+							<!-- Light Logo icon -->
+							<img src="<?php echo base_url() ?>assets/images/datadogs/logodark.png" alt="homepage" class="light-logo" style="width: 50px;" />
+						</b>
+						<!--End Logo icon -->
+						<!-- Logo text --><span>
+							<!-- dark Logo text -->
+							<img src="<?php echo base_url() ?>assets/images/datadogs/textDatadogslogo.png" alt="homepage" class="dark-logo" style="height: 50px;" />
+							<!-- Light Logo text -->
+							<img src="<?php echo base_url() ?>assets/images/datadogs/textDatadogslogo.png" class="light-logo" alt="homepage" style="height: 50px;" /></span> 
+						</a>
+				</div>
+				<!-- End Logo -->
+				
+				<div class="navbar-collapse">
+					
+					<!-- toggle and nav items -->
+					<ul class="navbar-nav mr-auto">
+						<!-- This is  -->
+						<li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+						<li class="nav-item"> <a class="nav-link sidebartoggler hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+
+					</ul>
+					
+				</div>
+			</nav>
+		</header>
+		<!-- End Topbar header -->
+		
+		
+		<!-- Left Sidebar - style you can find in sidebar.scss  -->
+		<aside class="left-sidebar">
+			<!-- Sidebar scroll-->
+			<div class="scroll-sidebar">
+				<!-- Sidebar navigation-->
+				<nav class="sidebar-nav">
+					<ul id="sidebarnav">
+						<li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Uasges</span></a>
+							<ul aria-expanded="false" class="collapse">
+								<li><a href="<?php echo site_url('home') ?>">Plan & Usage</a></li>
+								<!-- <li><a href="#">Usage Metering</a></li> -->
+							</ul>
+						</li>
+
+
+					</ul>
+				</nav>
+				<!-- End Sidebar navigation -->
+			</div>
+			<!-- End Sidebar scroll-->
+		</aside>
+		<!-- End Left Sidebar - style you can find in sidebar.scss  -->
+		
+
+		
+		<!-- Page wrapper  -->
+		<div class="page-wrapper">
+			
+			<!-- Container fluid  -->
+			<!-- <div class="container-fluid r-aside"> -->
+			<div class="container-fluid">
+
+				<?php $this->load->view($theme) ?>
+
+			</div>
+			<!-- End Container fluid  -->
+			
+			
+			<!-- footer -->
+			<footer class="footer"> ©2023 Datadogs Usage </footer>
+			<!-- End footer -->
+			
+		</div>
+		<!-- End Page wrapper  -->
+		
+	</div>
+	<!-- End Wrapper -->
+	
+</body>
+
+
+<!-- All Jquery -->
+<script src="<?php echo base_url() ?>assets/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap popper Core JavaScript -->
+<script src="<?php echo base_url() ?>assets/plugins/bootstrap/js/popper.min.js"></script>
+<script src="<?php echo base_url() ?>assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- slimscrollbar scrollbar JavaScript -->
+<script src="<?php echo base_url() ?>dist/js/perfect-scrollbar.jquery.min.js"></script>
+<!--Wave Effects -->
+<script src="<?php echo base_url() ?>dist/js/waves.js"></script>
+<!--Menu sidebar -->
+<script src="<?php echo base_url() ?>dist/js/sidebarmenu.js"></script>
+<!--Custom JavaScript -->
+<script src="<?php echo base_url() ?>dist/js/custom.min.js"></script>
+
+<!-- This page plugins -->
+<!--sparkline JavaScript -->
+<script src="<?php echo base_url() ?>assets/plugins/sparkline/jquery.sparkline.min.js"></script>
+<!--morris JavaScript -->
+<script src="<?php echo base_url() ?>assets/plugins/chartist-js/dist/chartist.min.js"></script>
+<script src="<?php echo base_url() ?>assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
+<!--c3 JavaScript -->
+<script src="<?php echo base_url() ?>assets/plugins/d3/d3.min.js"></script>
+<script src="<?php echo base_url() ?>assets/plugins/c3-master/c3.min.js"></script>
+<!-- Popup message jquery -->
+<!-- <script src="<?php echo base_url() ?>assets/plugins/toast-master/js/jquery.toast.js"></script> -->
+<!-- Chart JS -->
+<script src="<?php echo base_url() ?>dist/js/dashboard1.js"></script>
+<!-- This is data table -->
+<script src="<?php echo base_url() ?>assets/plugins/datatables/jquery.dataTables.min.js"></script>
+
+
+<!-- Style switcher -->
+<script src="<?php echo base_url() ?>assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+
+</html>
