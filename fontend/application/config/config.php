@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://'.$_SERVER['HTTP_HOST'].':'.$_SERVER['SERVER_PORT'].'/project_datadogsBeta/fontend';
+$config['base_url'] = 'http://'.$_SERVER['HTTP_HOST'].'/project_datadogs2/fontend';
 
 /*
 |--------------------------------------------------------------------------
