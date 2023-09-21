@@ -1,3 +1,4 @@
+// นำเข้า modules
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -5,7 +6,12 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose = request('mongoose');
  
+// ใช้ mongoose กับ node Promise 
 mongoose.Promise = global.Promise;
+// connect DB mongodb
+mongoose.connect('mongodb+srv://hykor48140:<password>@cluster0.hajolsf.mongodb.net/?retryWrites=true&w=majority')
+        .then(() => console.log('Connection Successfully!'))
+        .catch((err) => console.error(err))
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
