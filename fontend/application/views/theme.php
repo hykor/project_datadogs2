@@ -101,12 +101,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<!-- Sidebar navigation-->
 				<nav class="sidebar-nav">
 					<ul id="sidebarnav">
-						<li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Uasges</span></a>
-							<ul aria-expanded="false" class="collapse">
-								<li><a href="<?php echo site_url('home') ?>">Plan & Usage</a></li>
-								<!-- <li><a href="#">Usage Metering</a></li> -->
-							</ul>
-						</li>
+
+					<li><a href="<?php echo site_url('Customer_org') ?>"><i class="mdi mdi-gauge"></i><span class="hide-menu">Organization</span></a></li>
+
+					<!-- <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Uasges</span></a>
+						<ul aria-expanded="false" class="collapse">
+							<li><a href="<?php echo site_url('Customer_org') ?>">Customer Organization</a></li>
+							<li><a href="<?php echo site_url('home') ?>">Plan & Usage</a></li>
+						</ul>
+					</li> -->
 
 
 					</ul>
