@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose = request('mongoose');
-
+ 
 mongoose.Promise = global.Promise;
 
 var indexRouter = require('./routes/index');
