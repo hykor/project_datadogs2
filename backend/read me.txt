@@ -1,0 +1,6 @@
+install package nodejs
+Command
+
+npm install init
+npm install express
+npm install --save nodemon express @babel/node @babel/cli @babel/core @babel/preset-env

@@ -1,20 +1,24 @@
-// นำเข้า modules
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const mongoose = request('mongoose');
- 
-// ใช้ mongoose กับ node Promise 
+const mongoose = require('mongoose');
+const username = encodeURIComponent('wisit48140')
+const password = encodeURIComponent('wisit@oE6eH!007')
+const datadogs_usage = require('./routes/datadogs_usage');
+const port = 3000
+
 mongoose.Promise = global.Promise;
-// connect DB mongodb
-mongoose.connect('mongodb+srv://hykor48140:<password>@cluster0.hajolsf.mongodb.net/?retryWrites=true&w=majority')
-        .then(() => console.log('Connection Successfully!'))
-        .catch((err) => console.error(err))
+mongoose.connect(`mongodb+srv://${username}:${password}@cluster0.3omdfwf.mongodb.net/DatadogsOrgUsage?retryWrites=true&w=majority`,(err,client)=>{
+
+})
+      //  .then(() =>console.log('connection successfully!'))
+      //  .catch((err) => console.error(err))
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+
 
 var app = express();
 
@@ -30,6 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/datadogs_usage', datadogs_usage)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -46,5 +51,9 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+app.listen(port, ()=> {
+  console.log(`app listening on port ${port}!`)
+})
 
 module.exports = app;
