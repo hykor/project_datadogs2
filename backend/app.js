@@ -10,7 +10,8 @@ const datadogs_usage = require('./routes/datadogs_usage');
 const port = 3000
 
 mongoose.Promise = global.Promise;
-mongoose.connect(`mongodb+srv://${username}:${password}@cluster0.3omdfwf.mongodb.net/DatadogsOrgUsage?retryWrites=true&w=majority`,(err,client)=>{
+mongoose.connect(`mongodb://127.0.0.1:27017/DatadogOrgUsage?authMechanism=DEFAULT`,(err,client)=>{
+// mongoose.connect(`mongodb+srv://${username}:${password}@cluster0.3omdfwf.mongodb.net/DatadogsOrgUsage?retryWrites=true&w=majority`,(err,client)=>{
 
 })
       //  .then(() =>console.log('connection successfully!'))

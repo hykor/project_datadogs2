@@ -10,7 +10,9 @@ const UsageSchema = new mongoose.Schema({
     logs_ingested:Number,
     serverless_invocation:Number,
     timeseries:Number
-})
+},
+    { collection: 'SUB_ORG' }
+)
 
 
 
