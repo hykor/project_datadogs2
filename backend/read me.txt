@@ -2,5 +2,11 @@ install package nodejs
 Command
 
 npm install init
-npm install express
+
+npm install express 
+OR
+npm i body-parser cors express mongoose
+
+npm i nodemon --save-dev
+
 npm install --save nodemon express @babel/node @babel/cli @babel/core @babel/preset-env

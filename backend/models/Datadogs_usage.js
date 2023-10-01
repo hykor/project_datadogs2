@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+
+// SUB_ORG
 const UsageSchema = new mongoose.Schema({
     parent_org:String,
     org_name:String,
@@ -13,8 +15,6 @@ const UsageSchema = new mongoose.Schema({
 },
     { collection: 'SUB_ORG' }
 )
-
-
 
 module.exports = mongoose.model('Datadogs_usage', UsageSchema)
 
