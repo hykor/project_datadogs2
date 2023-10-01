@@ -26,7 +26,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<!--Toaster Popup message CSS -->
 	<link href="<?php echo base_url() ?>assets/plugins/toast-master/css/jquery.toast.css" rel="stylesheet">
 	<!-- Custom CSS -->
-	<link href="<?php echo base_url() ?>dist/css/style.css?dsfjsdsf" rel="stylesheet">
+	<link href="<?php echo base_url() ?>dist/css/style.css" rel="stylesheet">
 	<!-- Dashboard 1 Page CSS -->
 	<link href="<?php echo base_url() ?>dist/css/pages/dashboard1.css" rel="stylesheet">
 	<!-- You can change the theme colors from here -->
@@ -41,23 +41,23 @@ defined('BASEPATH') or exit('No direct script access allowed');
 </head>
 
 <body class="fix-header fix-sidebar card-no-border">
-
+	
 	<!-- Preloader - style you can find in spinners.css -->
-
+	
 	<div class="preloader">
 		<div class="loader">
 			<div class="loader__figure"></div>
 			<p class="loader__label">Datadogs</p>
 		</div>
 	</div>
-
+	
 	<!-- Main wrapper - style you can find in pages.scss -->
 	<div id="main-wrapper">
-
+		
 		<!-- Topbar header - style you can find in pages.scss -->
 		<header class="topbar">
 			<nav class="navbar top-navbar navbar-expand-md navbar-light">
-
+				
 				<!-- Logo -->
 				<div class="navbar-header">
 					<a class="navbar-brand" href="#">
@@ -73,13 +73,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 							<!-- dark Logo text -->
 							<img src="<?php echo base_url() ?>assets/images/datadogs/textDatadogslogo.png" alt="homepage" class="dark-logo" style="height: 50px;" />
 							<!-- Light Logo text -->
-							<img src="<?php echo base_url() ?>assets/images/datadogs/textDatadogslogo.png" class="light-logo" alt="homepage" style="height: 50px;" /></span>
-					</a>
+							<img src="<?php echo base_url() ?>assets/images/datadogs/textDatadogslogo.png" class="light-logo" alt="homepage" style="height: 50px;" /></span> 
+						</a>
 				</div>
 				<!-- End Logo -->
-
+				
 				<div class="navbar-collapse">
-
+					
 					<!-- toggle and nav items -->
 					<ul class="navbar-nav mr-auto">
 						<!-- This is  -->
@@ -87,13 +87,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 						<li class="nav-item"> <a class="nav-link sidebartoggler hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
 
 					</ul>
-
+					
 				</div>
 			</nav>
 		</header>
 		<!-- End Topbar header -->
-
-
+		
+		
 		<!-- Left Sidebar - style you can find in sidebar.scss  -->
 		<aside class="left-sidebar">
 			<!-- Sidebar scroll-->
@@ -102,9 +102,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<nav class="sidebar-nav">
 					<ul id="sidebarnav">
 
-						<li><a href="<?php echo site_url('Customer_org') ?>"><i class="mdi mdi-gauge"></i><span class="hide-menu">Organization</span></a></li>
+					<li><a href="<?php echo site_url('Customer_org') ?>"><i class="mdi mdi-gauge"></i><span class="hide-menu">Organization</span></a></li>
 
-						<li class="active"> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-filter"></i><span class="hide-menu">Filter</span></a>
+					<li class="active"> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-filter"></i><span class="hide-menu">Filter</span></a>
 						<ul aria-expanded="true" class="collapse">
 							<li><a href="#">Customer Organization</a></li>
 							<li><a href="#">Plan & Usage</a></li>
@@ -118,12 +118,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			<!-- End Sidebar scroll-->
 		</aside>
 		<!-- End Left Sidebar - style you can find in sidebar.scss  -->
+		
 
-
-
+		
 		<!-- Page wrapper  -->
 		<div class="page-wrapper">
-
+			
 			<!-- Container fluid  -->
 			<!-- <div class="container-fluid r-aside"> -->
 			<div class="container-fluid">
@@ -132,18 +132,18 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 			</div>
 			<!-- End Container fluid  -->
-
-
+			
+			
 			<!-- footer -->
 			<footer class="footer"> ©2023 Datadogs Usage </footer>
 			<!-- End footer -->
-
+			
 		</div>
 		<!-- End Page wrapper  -->
-
+		
 	</div>
 	<!-- End Wrapper -->
-
+	
 </body>
 
 
@@ -164,8 +164,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <!-- This page plugins -->
 <!--sparkline JavaScript -->
 <script src="<?php echo base_url() ?>assets/plugins/sparkline/jquery.sparkline.min.js"></script>
-<!--stickey kit -->
-<script src="<?php echo base_url() ?>assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
 <!--morris JavaScript -->
 <script src="<?php echo base_url() ?>assets/plugins/chartist-js/dist/chartist.min.js"></script>
 <script src="<?php echo base_url() ?>assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
@@ -182,7 +180,5 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 <!-- Style switcher -->
 <script src="<?php echo base_url() ?>assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
-<!-- This page plugins -->
-<script src="<?php echo base_url() ?>dist/js/jasny-bootstrap.js"></script>
 
 </html>

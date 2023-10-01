@@ -1,0 +1,96 @@
+<div class="row page-titles">
+	<div class="col-md-5 align-self-center">
+		<h4 class="text-themecolor">Organization</h4>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<div class="row d-flex">
+					<div class="col-md-12">
+						<h4 class="card-title"><span class="lstick"></span>Customer Organization</h4>
+					</div>
+
+					<div class="col-md-12 mt-1">
+						<h6 class="card-title">AWN <a class="get-code" data-toggle="collapse" href="#tt1" aria-expanded="true"><i class="fa fa-sort-desc has-arrow waves-effect waves-dark" title="List Customer org" data-toggle="tooltip"></i></a></h6>
+                        <div class="collapse show m-t-15" id="tt1" aria-expanded="true"> 
+							<div class="table-responsive">
+                                <table class="table table-hover table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Subscription</th>
+                                            <th>Unit</th>
+                                            <th>Usage</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2023-04</td>
+                                            <td>Infra Host</td>
+                                            <td>Per Host</td>
+                                            <td>80</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2023-04</td>
+                                            <td>Container</td>
+                                            <td>Per Container</td>
+                                            <td>743</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2023-04</td>
+                                            <td>APM</td>
+                                            <td>Per Container</td>
+                                            <td>42</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2023-04</td>
+                                            <td>Database</td>
+                                            <td>Per Host</td>
+                                            <td>40</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2023-04</td>
+                                            <td>Log Indexing 30D</td>
+                                            <td>Per 1M. Event</td>
+                                            <td>530</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2023-04</td>
+                                            <td>Log Indexing 7D</td>
+                                            <td>Per 1M. Event</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2023-04</td>
+                                            <td>Log Indexing 3 D</td>
+                                            <td>Per 1M. Event</td>
+                                            <td>3280</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2023-04</td>
+                                            <td>Log Ingestion</td>
+                                            <td>Per 1 GB</td>
+                                            <td>25900</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+
+
+

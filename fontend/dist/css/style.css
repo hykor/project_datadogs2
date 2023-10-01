@@ -1327,8 +1327,8 @@ Notify
 .right-side-toggle {
   position: relative; }
 
-.right-side-toggle i {
-  -webkit-transition-property: -webkit-transform;
+.right-side-toggle i{
+  /* -webkit-transition-property: -webkit-transform;
   -webkit-transition-duration: 1s;
   -moz-transition-property: -moz-transform;
   -moz-transition-duration: 1s;
@@ -1349,10 +1349,11 @@ Notify
   animation-name: rotate;
   animation-duration: 2s;
   animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  position: absolute;
+  animation-timing-function: linear; */
+  /* position: absolute; */
   top: 18px;
-  left: 18px; }
+  left: 18px;
+ }
 
 .right-sidebar {
   position: fixed;
@@ -3221,10 +3222,18 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::after {
 
 .btn-circle.right-side-toggle {
   position: fixed;
-  bottom: 20px;
+  top: 10px;
   right: 20px;
   padding: 25px;
-  z-index: 10; }
+  z-index: 100; }
+
+  .btn-outline-secondary.right-side-toggle {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    padding: 5px;
+    z-index: 100;
+  }
 
 /*Radio button*/
 @-webkit-keyframes ripple {
