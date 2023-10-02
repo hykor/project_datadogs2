@@ -17,8 +17,8 @@
                         <h4 class="card-title"><span class="lstick"></span>Customer Organization</h4>
                     </div>
 
-                    <div class="col-md-12 mt-1">
-                        <h6 class="card-title">AWN <a class="get-code" data-toggle="collapse" href="#tt1" aria-expanded="true"><i class="fa fa-sort-desc has-arrow waves-effect waves-dark" title="List Customer org" data-toggle="tooltip"></i></a></h6>
+                    <div class="col-md-12 mt-2">
+                        <h5 class="card-title">AWN <a class="get-code" data-toggle="collapse" href="#tt1" aria-expanded="true"><i class="fa fa-sort-desc has-arrow waves-effect waves-dark" title="List Customer org" data-toggle="tooltip"></i></a></h5>
                         <div class="collapse show m-t-15" id="tt1" aria-expanded="true">
                             <div class="table-responsive">
                                 <table class="table table-hover table-bordered">
@@ -26,59 +26,18 @@
                                         <tr>
                                             <th>Date</th>
                                             <th>Subscription</th>
-                                            <th>Unit</th>
                                             <th>Usage</th>
+                                            <th>Unit</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>2023-04</td>
                                             <td>Infra Host</td>
-                                            <td>Per Host</td>
                                             <td>80</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2023-04</td>
-                                            <td>Container</td>
-                                            <td>Per Container</td>
-                                            <td>743</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2023-04</td>
-                                            <td>APM</td>
-                                            <td>Per Container</td>
-                                            <td>42</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2023-04</td>
-                                            <td>Database</td>
                                             <td>Per Host</td>
-                                            <td>40</td>
                                         </tr>
-                                        <tr>
-                                            <td>2023-04</td>
-                                            <td>Log Indexing 30D</td>
-                                            <td>Per 1M. Event</td>
-                                            <td>530</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2023-04</td>
-                                            <td>Log Indexing 7D</td>
-                                            <td>Per 1M. Event</td>
-                                            <td>0</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2023-04</td>
-                                            <td>Log Indexing 3 D</td>
-                                            <td>Per 1M. Event</td>
-                                            <td>3280</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2023-04</td>
-                                            <td>Log Ingestion</td>
-                                            <td>Per 1 GB</td>
-                                            <td>25900</td>
-                                        </tr>
+
                                     </tbody>
                                 </table>
                             </div>
@@ -159,8 +118,52 @@
 
     </div>
 </div>
+
+<table id="employees"></table>
+
 <!-- ============================================================== -->
 <!-- End Right sidebar -->
 
 
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
+<script>
+    // api url
+    const api_url =
+        "http://localhost:3000/datadogs_usage/MSP";
+
+    // Defining async function
+    async function getapi(url) {
+
+        // Storing response
+        const response = await fetch(url);
+
+        // Storing data in form of JSON
+        var data = await response.json();
+        console.log(data);
+        show(data)
+    }
+    // Calling that async function
+    getapi(api_url);
+
+    function show(data) {
+    let tab =
+        `<tr>
+          <th>Name</th>
+          <th>Office</th>
+          <th>Position</th>
+          <th>Salary</th>
+         </tr>`;
+   
+    // Loop to access all rows
+     for (let r of data.list) {
+        tab += `<tr>
+    <td>${r.org_name} </td>
+       
+</tr>`;
+    }
+    // Setting innerHTML as tab variable
+    document.getElementById("employees").innerHTML = tab;
+}
+
+
+</script>

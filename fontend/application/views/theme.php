@@ -104,11 +104,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 						<li><a href="<?php echo site_url('Customer_org') ?>"><i class="mdi mdi-gauge"></i><span class="hide-menu">Organization</span></a></li>
 
-						<li class="active"> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-filter"></i><span class="hide-menu">Filter</span></a>
+						<!-- <li class="active"> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-filter"></i><span class="hide-menu">Filter</span></a>
 						<ul aria-expanded="true" class="collapse">
 							<li><a href="#">Customer Organization</a></li>
 							<li><a href="#">Plan & Usage</a></li>
-						</ul>
+						</ul> -->
 					</li>
 
 					</ul>

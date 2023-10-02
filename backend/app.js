@@ -8,6 +8,7 @@ const username = encodeURIComponent('wisit48140')
 const password = encodeURIComponent('wisit@oE6eH!007')
 const datadogs_usage = require('./routes/datadogs_usage');
 const port = 3000
+const cors = require('cors');
 
 mongoose.Promise = global.Promise;
 mongoose.connect(`mongodb://127.0.0.1:27017/DatadogOrgUsage?authMechanism=DEFAULT`,(err,client)=>{
@@ -32,6 +33,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(cors());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
