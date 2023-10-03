@@ -17,6 +17,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<!-- Bootstrap Core CSS -->
 	<link href="<?php echo base_url() ?>assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="<?php echo base_url() ?>assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>assets/plugins/bootstrap-table/dist/bootstrap-table.min.css" rel="stylesheet" type="text/css" />
 	<!-- This page CSS -->
 	<!-- chartist CSS -->
 	<link href="<?php echo base_url() ?>assets/plugins/chartist-js/dist/chartist.min.css" rel="stylesheet">
@@ -26,7 +27,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<!--Toaster Popup message CSS -->
 	<link href="<?php echo base_url() ?>assets/plugins/toast-master/css/jquery.toast.css" rel="stylesheet">
 	<!-- Custom CSS -->
-	<link href="<?php echo base_url() ?>dist/css/style.css?dsfjsdsf" rel="stylesheet">
+	<link href="<?php echo base_url() ?>dist/css/style.css?fsdf97" rel="stylesheet">
 	<!-- Dashboard 1 Page CSS -->
 	<link href="<?php echo base_url() ?>dist/css/pages/dashboard1.css" rel="stylesheet">
 	<!-- You can change the theme colors from here -->
@@ -109,7 +110,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 							<li><a href="#">Customer Organization</a></li>
 							<li><a href="#">Plan & Usage</a></li>
 						</ul> -->
-					</li>
+						</li>
 
 					</ul>
 				</nav>
@@ -160,6 +161,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <script src="<?php echo base_url() ?>dist/js/sidebarmenu.js"></script>
 <!--Custom JavaScript -->
 <script src="<?php echo base_url() ?>dist/js/custom.min.js"></script>
+<script src="<?php echo base_url() ?>assets/plugins/bootstrap-table/dist/bootstrap-table.min.js"></script>
+<script src="<?php echo base_url() ?>assets/plugins/bootstrap-table/dist/bootstrap-table.ints.js"></script>
 
 <!-- This page plugins -->
 <!--sparkline JavaScript -->

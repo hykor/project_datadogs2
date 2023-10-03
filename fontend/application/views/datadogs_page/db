@@ -1,0 +1,20 @@
+   {
+        "_id": "64c2336b28d9afc5290eb9b2",
+        "org_name": "MSP BG for AWN-OR",
+        "month": "2023-07",
+        "infra_host": 124,
+        "network_device": 2,
+        "apm_host": 46,
+        "apm_trace_search": 13968546,
+        "dbm_host": 45,
+        "dbm_normalized_queries": 8532,
+        "infra_container": 530404,
+        "ingested_spans": 3098,
+        "logs_indexed_30day": 3773048545,
+        "logs_ingested": 25844,
+        "serverless_invocation": 84584244,
+        "timeseries": 3844,
+        "logs_indexed_3day": 4334358987,
+        "synthetics_api_tests": 62
+    }
+

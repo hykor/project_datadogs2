@@ -18,29 +18,32 @@
                     </div>
 
                     <div class="col-md-12 mt-2">
-                        <h5 class="card-title">AWN <a class="get-code" data-toggle="collapse" href="#tt1" aria-expanded="true"><i class="fa fa-sort-desc has-arrow waves-effect waves-dark" title="List Customer org" data-toggle="tooltip"></i></a></h5>
-                        <div class="collapse show m-t-15" id="tt1" aria-expanded="true">
-                            <div class="table-responsive">
-                                <table class="table table-hover table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th>Date</th>
-                                            <th>Subscription</th>
-                                            <th>Usage</th>
-                                            <th>Unit</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>2023-04</td>
-                                            <td>Infra Host</td>
-                                            <td>80</td>
-                                            <td>Per Host</td>
-                                        </tr>
+                        <!-- <div class=""> -->
+                        <div class="table-responsive">
+                            <table class="table table-hover table-bordered max-display-content" data-toggle="table" data-sort-name="stargazers_count" data-height="300" data-mobile-responsive="true" data-sort-order="desc">
+                                <thead>
+                                    <tr class="max">
+                                        <th data-sortable="true" data-width="100">Organization</th>
+                                        <th data-width="100" data-sortable="true">Infra Host</th>
+                                        <th data-width="100" data-sortable="true">Network Device</th>
+                                        <th data-width="100" data-sortable="true">APM Host</th>
+                                        <th data-width="100" data-sortable="true">APM Trace Search</th>
+                                        <th data-width="100" data-sortable="true">DBM Host</th>
+                                        <th data-width="100" data-sortable="true">DBM Normalized Queries</th>
+                                        <th data-width="100" data-sortable="true">Infra Container</th>
+                                        <th data-width="100" data-sortable="true">Ingested Spans</th>
+                                        <th data-width="100" data-sortable="true">Logs Indexed 30day</th>
+                                        <th data-width="100" data-sortable="true">Logs Ingested</th>
+                                        <th data-width="100" data-sortable="true">Serverless Invocation</th>
+                                        <th data-width="100" data-sortable="true">Timeseries</th>
+                                        <th data-width="100" data-sortable="true">Logs Indexed 3day</th>
+                                        <th data-width="100" data-sortable="true">Synthetics API Tests</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="data">
 
-                                    </tbody>
-                                </table>
-                            </div>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
 
@@ -52,6 +55,36 @@
 </div>
 
 
+<!-- Table -->
+<!-- <div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Test sort table</h4>
+        <h6 class="card-subtitle">Test table</h6>
+        <table data-toggle="table" data-url="http://localhost:3000/datadogs_usage/MSP" data-sort-name="stargazers_count" data-height="300" data-mobile-responsive="true" data-sort-order="desc" class="table">
+            <thead>
+                <tr>
+                    <th data-field="org_name" data-sortable="true" data-width="100"> Organization </th>
+                    <th data-field="infra_host" data-sortable="true"> Infra Host </th>
+                    <th data-field="network_device" data-sortable="true"> Network Device </th>
+                    <th data-field="apm_host" data-sortable="true"> APM Host </th>
+                    <th data-field="apm_trace_search" data-sortable="true">APM Trace Search</th>
+                    <th data-field="dbm_host" data-sortable="true">DBM Host</th>
+                    <th data-field="dbm_normalized_queries" data-sortable="true">DBM Normalized Queries</th>
+                    <th data-field="infra_container" data-sortable="true">Infra Container</th>
+                    <th data-field="ingested_spans" data-sortable="true">Ingested Spans</th>
+                    <th data-field="logs_indexed_30day" data-sortable="true">Logs Indexed 30day</th>
+                    <th data-field="logs_ingested" data-sortable="true">Logs Ingested</th>
+                    <th data-field="serverless_invocation" data-sortable="true">Serverless Invocation</th>
+                    <th data-field="timeseries" data-sortable="true">Timeseries</th>
+                    <th data-field="logs_indexed_3day" data-sortable="true">Logs Indexed 3day</th>
+                    <th data-field="synthetics_api_tests" data-sortable="true">Synthetics API Tests</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div> -->
+
+
 <!-- .right-sidebar -->
 <div class="right-sidebar">
     <div class="slimscrollright">
@@ -61,26 +94,47 @@
                 <li><b>Custommer</b></li>
                 <li>
                     <b class="">
+                        <select class="form-control">
+                            <option>Select Customer</option>
+                            <option>AWN</option>
+                            <option>DTGO</option>
+                            <option>Greenline</option>
+                            <option>Heng</option>
+                            <option>Major Cineplex</option>
+                            <option>Noble</option>
+                            <option>PTG</option>
+                            <option>Thairath</option>
+                        </select>
+                    </b>
+                </li>
+                <li>
+                    <b class="">
                         <input type="checkbox" id="basic_checkbox_1" class="filled-in chk-col-indigo" checked />
-                        <label for="basic_checkbox_1">AWN</label>
+                        <label for="basic_checkbox_1">PTT Oil and Retail Business</label>
                     </b>
                 </li>
                 <li>
                     <b class="">
                         <input type="checkbox" id="basic_checkbox_2" class="filled-in chk-col-indigo" checked />
-                        <label for="basic_checkbox_2">DTGO</label>
+                        <label for="basic_checkbox_2">OR AOA WEB</label>
                     </b>
                 </li>
                 <li>
                     <b class="">
                         <input type="checkbox" id="basic_checkbox_3" class="filled-in chk-col-indigo" checked />
-                        <label for="basic_checkbox_3">Greenline</label>
+                        <label for="basic_checkbox_3">OR AOA</label>
                     </b>
                 </li>
                 <li>
                     <b class="">
                         <input type="checkbox" id="basic_checkbox_4" class="filled-in chk-col-indigo" checked />
-                        <label for="basic_checkbox_4">Heng</label>
+                        <label for="basic_checkbox_4">OR LMS</label>
+                    </b>
+                </li>
+                <li>
+                    <b class="">
+                        <input type="checkbox" id="basic_checkbox_5" class="filled-in chk-col-indigo" checked />
+                        <label for="basic_checkbox_4">OR Data Platform</label>
                     </b>
                 </li>
             </ul>
@@ -119,51 +173,99 @@
     </div>
 </div>
 
-<table id="employees"></table>
-
 <!-- ============================================================== -->
 <!-- End Right sidebar -->
 
 
 <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
 <script>
-    // api url
-    const api_url =
-        "http://localhost:3000/datadogs_usage/MSP";
+    fetch("http://localhost:3000/datadogs_usage/MSP").then(
+        res => {
+            res.json().then(
+                data => {
+                    console.log(data);
+                    if (data.length > 0) {
 
-    // Defining async function
-    async function getapi(url) {
-
-        // Storing response
-        const response = await fetch(url);
-
-        // Storing data in form of JSON
-        var data = await response.json();
-        console.log(data);
-        show(data)
-    }
-    // Calling that async function
-    getapi(api_url);
-
-    function show(data) {
-    let tab =
-        `<tr>
-          <th>Name</th>
-          <th>Office</th>
-          <th>Position</th>
-          <th>Salary</th>
-         </tr>`;
-   
-    // Loop to access all rows
-     for (let r of data.list) {
-        tab += `<tr>
-    <td>${r.org_name} </td>
-       
-</tr>`;
-    }
-    // Setting innerHTML as tab variable
-    document.getElementById("employees").innerHTML = tab;
-}
-
-
+                        var temp = "";
+                        data.forEach((itemData) => {
+                            temp += "<tr>";
+                            temp += "<td  data-toggle='table' class='text-center'><h6>" + itemData.org_name + "</h6></td>";
+                            if (itemData.infra_host > 0) {
+                                temp += "<td class='text-center'><h6>" + itemData.infra_host + "</h6></td>";
+                            } else {
+                                temp += "<td class='text-center'><h6>-</h6></td>"
+                            }
+                            if (itemData.network_device > 0) {
+                                temp += "<td class='text-center'><h6>" + itemData.network_device + "</h6></td>";
+                            } else {
+                                temp += "<td class='text-center'><h6>-</h6></td>"
+                            }
+                            if (itemData.apm_host > 0) {
+                                temp += "<td class='text-center'><h6>" + itemData.apm_host + "</h6></td>";
+                            } else {
+                                temp += "<td class='text-center'><h6>-</h6></td>"
+                            }
+                            if (itemData.apm_trace_search > 0) {
+                                temp += "<td class='text-center'><h6>" + itemData.apm_trace_search + "</h6></td>";
+                            } else {
+                                temp += "<td class='text-center'><h6>-</h6></td>"
+                            }
+                            if (itemData.dbm_host > 0) {
+                                temp += "<td class='text-center'><h6>" + itemData.dbm_host + "</h6></td>";
+                            } else {
+                                temp += "<td class='text-center'><h6>-</h6></td>"
+                            }
+                            if (itemData.dbm_normalized_queries > 0) {
+                                temp += "<td class='text-center'><h6>" + itemData.dbm_normalized_queries + "</h6></td>";
+                            } else {
+                                temp += "<td class='text-center'><h6>-</h6></td>"
+                            }
+                            if (itemData.infra_container > 0) {
+                                temp += "<td class='text-center'><h6>" + itemData.infra_container + "</h6></td>";
+                            } else {
+                                temp += "<td class='text-center'><h6>-</h6></td>"
+                            }
+                            if (itemData.ingested_spans > 0) {
+                                temp += "<td class='text-center'><h6>" + itemData.ingested_spans + "</h6></td>";
+                            } else {
+                                temp += "<td class='text-center'><h6>-</h6></td>"
+                            }
+                            if (itemData.logs_indexed_30day > 0) {
+                                temp += "<td class='text-center'><h6>" + itemData.logs_indexed_30day + "</h6></td>";
+                            } else {
+                                temp += "<td class='text-center'><h6>-</h6></td>"
+                            }
+                            if (itemData.logs_ingested > 0) {
+                                temp += "<td class='text-center'><h6>" + itemData.logs_ingested + "</h6></td>";
+                            } else {
+                                temp += "<td class='text-center'><h6>-</h6></td>"
+                            }
+                            if (itemData.serverless_invocation > 0) {
+                                temp += "<td class='text-center'><h6>" + itemData.serverless_invocation + "</h6></td>";
+                            } else {
+                                temp += "<td class='text-center'><h6>-</h6></td>"
+                            }
+                            if (itemData.timeseries > 0) {
+                                temp += "<td class='text-center'><h6>" + itemData.timeseries + "</h6></td>";
+                            } else {
+                                temp += "<td class='text-center'><h6>-</h6></td>"
+                            }
+                            if (itemData.logs_indexed_3day > 0) {
+                                temp += "<td class='text-center'><h6>" + itemData.logs_indexed_3day + "</h6></td>";
+                            } else {
+                                temp += "<td class='text-center'><h6>-</h6></td>"
+                            }
+                            if (itemData.synthetics_api_tests > 0) {
+                                temp += "<td class='text-center'><h6>" + itemData.synthetics_api_tests + "</h6></td>";
+                            } else {
+                                temp += "<td class='text-center'><h6>-</h6></td>"
+                            }
+                            temp += "</tr>";
+                        });
+                        document.getElementById('data').innerHTML = temp;
+                    }
+                }
+            )
+        }
+    )
 </script>

@@ -1,22 +1,25 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+const bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose = require('mongoose');
-const username = encodeURIComponent('wisit48140')
-const password = encodeURIComponent('wisit@oE6eH!007')
+// const username = encodeURIComponent('wisit48140')
+// const password = encodeURIComponent('wisit@oE6eH!007')
 const datadogs_usage = require('./routes/datadogs_usage');
 const port = 3000
 const cors = require('cors');
 
 mongoose.Promise = global.Promise;
-mongoose.connect(`mongodb://127.0.0.1:27017/DatadogOrgUsage?authMechanism=DEFAULT`,(err,client)=>{
 // mongoose.connect(`mongodb+srv://${username}:${password}@cluster0.3omdfwf.mongodb.net/DatadogsOrgUsage?retryWrites=true&w=majority`,(err,client)=>{
-
+mongoose.connect(`mongodb://127.0.0.1:27017/DatadogOrgUsage?authMechanism=DEFAULT`,(err,client)=>{
+  if(err) () => {
+    console.error(err)
+  }
+  console.log('connection successfully!')
 })
-      //  .then(() =>console.log('connection successfully!'))
-      //  .catch((err) => console.error(err))
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
