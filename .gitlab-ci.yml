@@ -5,9 +5,10 @@
         - npm i body-parser cors express mongoose
         - npm install --save nodemon express @babel/node @babel/cli @babel/core @babel/preset-env
 
-    cache:
+    cache: 
         paths:
             - node_modules/ 
+        stages:
     
     stages: 
         - build
