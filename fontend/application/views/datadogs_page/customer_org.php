@@ -17,7 +17,16 @@
                         <h4 class="card-title"><span class="lstick"></span>Customer Organization</h4>
                     </div>
 
-                    <div class="col-md-12 mt-2">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" id="searchOrg" onkeypress="return enterKeyPressed(event)" class="form-control" placeholder="Search Organization">
+                                <div class="input-group-addon"><i class="ti-search"></i></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 mt-0">
                         <!-- <div class=""> -->
                         <div class="table-responsive">
                             <table class="table table-hover table-bordered max-display-content" data-toggle="table" data-sort-name="stargazers_count" data-height="300" data-mobile-responsive="true" data-sort-order="desc">
@@ -179,6 +188,8 @@
 
 <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
 <script>
+    
+    
     fetch("http://localhost:3000/datadogs_usage/MSP").then(
         res => {
             res.json().then(
@@ -268,4 +279,19 @@
             )
         }
     )
+
+    async function enterKeyPressed(event) {
+        var searchOrg = document.getElementById("searchOrg").value;
+        if (event.keyCode == 13) {
+            res = await fetch(`http://localhost:3000/datadogs_usage/MSP/${searchOrg}`)
+            const movies = await res.json();
+            console.log(movies);
+            
+            console.log("Enter key is pressed");
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
 </script>

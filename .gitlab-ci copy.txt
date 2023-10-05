@@ -1,0 +1,33 @@
+    stages: 
+        - build
+        - test
+        - deploy
+    Docker_Build:
+        stage: build
+        tags:
+            - CI
+            - Devops
+        script: 
+            - id
+            - docker login registry.gitlab.com -u hykor -p $Token_git
+            - docker build -t registry.gitlab.com/hykor/datadogs-usage-analysis -f Dockerfile.txt .
+            - docker push registry.gitlab.com/hykor/datadogs-usage-analysis
+
+    Docker_Test:
+        stage: test
+        tags:
+            - CI
+            - Devops
+        script:
+            - docker images
+
+    Docker_Deploy:
+        stage: deploy
+        # when: manual
+        tags:
+            - CI
+            - Devops
+        script:
+            - "docker rm -f $(docker ps -a -q)"
+            - docker images -a | grep "<none>" | awk '{print $3}' | xargs docker rmi
+            - docker run -itd -p 8080:80 registry.gitlab.com/hykor/datadogs-usage-analysis 

@@ -1,0 +1,9 @@
+From php:7.2-apache
+LABEL name="devops"
+COPY fontend /var/www/html/
+
+From node:18
+# COPY package*.json ./
+COPY backend /var/www/html/
+EXPOSE 8080
+CMD [ "npm","run","dev" ]

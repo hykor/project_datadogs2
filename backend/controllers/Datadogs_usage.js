@@ -17,5 +17,16 @@ const getsupOrg = (req, res) =>{
     })
 }
 
-module.exports = {getMSP, getsupOrg}
+const searchOrgname = (req, res) =>{
+    OrgUsageMSP.findOne({org_name:req.params.org_name },(err, datadogs_usage) => {
+        if(err) return next(err)
+        res.json(datadogs_usage)
+        // for await (const genOrgMSP of OrgUsageMSP){
+        
+        // }
+    })
+    
+}
+
+module.exports = {getMSP, getsupOrg, searchOrgname}
 
